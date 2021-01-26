@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+// COLOURS
+$black: hsl(20, 6%, 21%);
+$black-bis: hsl(20, 6%, 29%);
+$black-ter: hsl(20, 6%, 37%);
+$grey-darker: hsl(20, 6%, 45%);
+$grey-dark: hsl(20, 6%, 53%);
+$grey: hsl(20, 6%, 61%);
+$grey-light: hsl(20, 6%, 69%);
+$grey-lighter: hsl(20, 6%, 77%);
+$grey-lightest: hsl(20, 6%, 85%);
+$white-ter: hsl(20, 6%, 93%);
+$white-bis: hsl(20, 6%, 97%);
+$white: hsl(60, 100%, 99%);
+$orange: hsl(27, 65%, 46%); // OK
+$yellow: hsl(54, 71%, 52%); // OK
+$green: hsl(79, 65%, 35%); // OK
+$turquoise: hsl(188, 59%, 39%); // OK
+$cyan: hsl(204, 58%, 42%); // OK
+$blue: hsl(220, 53%, 37%); // OK
+$purple: hsl(252, 59%, 39%); //OK
+$red: hsl(332, 41%, 40%); //OK
+
+// GLOBAL
+// font
+$family-sans-serif: 'Georgia', sans-serif;
+$title-family: 'PT Sans Narrow', sans-serif;
+$subtitle-family: 'PT Sans Narrow', sans-serif;
+//colours
+$primary: $blue;
+$text: $black; // also updates text colour on navbar
+
+// NAVBAR
+$navbar-height: 5.5rem;
+$navbar-item-img-max-height: 5rem;
+$navbar-item-hover-background-color: $white-ter;
+
+// TITLES
+$title-color: $black-bis;
+$text-strong: $black;
