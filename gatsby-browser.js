@@ -1,5 +1,5 @@
 import React from 'react';
-import ResponseTapBtn from './src/components/responseTapBtn';
+import NavbarWrapper from './src/components/navbarWrapper';
 export const wrapPageElement = ({ element, props }) => (
-  <ResponseTapBtn {...props}>{element}</ResponseTapBtn>
+  <NavbarWrapper {...props}>{element}</NavbarWrapper>
 );

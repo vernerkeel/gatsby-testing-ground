@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { FaRegEnvelope } from 'react-icons/fa';
-import ResponseTapButton from './responseTapBtn';
+
+import ResponseTapBtn from './callBtn';
 
 const NavbarBurger = (props) => (
   <div
@@ -44,19 +45,20 @@ export default class Navbar extends React.Component {
               <Link to={'/'} className='navbar-item'>
                 Home
               </Link>
-
-              {/*TODO: ADD URL*/}
-              <Link to={'/about'} className='navbar-item'>
-                About
-              </Link>
+              <div class='navbar-item has-dropdown is-hoverable'>
+                <a class='navbar-link'>More</a>
+                <div class='navbar-dropdown'>
+                  <Link to={'/about'} class='navbar-item'>
+                    About
+                  </Link>
+                </div>
+              </div>
             </div>
-
             <div className='navbar-end has-background-white-bis'>
               <div className='navbar-item'>
                 <div className='field is-grouped'>
-                  <p className='control'>
-                    <ResponseTapButton />
-                  </p>
+                  <ResponseTapBtn />
+
                   <p className='control'>
                     <a className='button is-primary' href='/'>
                       <span className='icon'>
