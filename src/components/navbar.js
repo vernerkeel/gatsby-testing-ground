@@ -41,13 +41,21 @@ export default class Navbar extends React.Component {
             }`}
           >
             <div className='navbar-start'>
-              {/*TODO: ADD URL*/}
               <Link to={'/'} className='navbar-item'>
                 Home
               </Link>
               <div class='navbar-item has-dropdown is-hoverable'>
                 <a class='navbar-link'>More</a>
                 <div class='navbar-dropdown'>
+                  <Link to={'/about'} class='navbar-item'>
+                    About
+                  </Link>
+                  <Link to={'/about'} class='navbar-item'>
+                    About
+                  </Link>
+                  <Link to={'/about'} class='navbar-item'>
+                    About
+                  </Link>
                   <Link to={'/about'} class='navbar-item'>
                     About
                   </Link>

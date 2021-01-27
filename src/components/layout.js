@@ -6,7 +6,6 @@ import EmailForm from './emailForm';
 const Layout = ({ children }) => {
   return (
     <>
-      <Navbar />
       {children}
       <EmailForm />
     </>
