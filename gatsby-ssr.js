@@ -1,5 +1,5 @@
-import React from 'react';
-import NavbarWrapper from './src/components/navbarWrapper';
+const React = require('react');
+const NavbarWrapper = require('./src/components/navbarWrapper');
 export const wrapPageElement = ({ element, props }) => (
   <NavbarWrapper {...props}>{element}</NavbarWrapper>
 );
