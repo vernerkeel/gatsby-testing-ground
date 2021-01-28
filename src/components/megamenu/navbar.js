@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { FaRegEnvelope } from 'react-icons/fa';
-
-import ResponseTapBtn from './callBtn';
+import CallEmailBtns from './callEmailBtns';
+import ServicesMenu from './servicesMenu';
 
 const NavbarBurger = (props) => (
   <div
@@ -41,41 +40,14 @@ export default class Navbar extends React.Component {
             }`}
           >
             <div className='navbar-start'>
-              <Link to={'/'} className='navbar-item'>
+              <Link to={'/'} className='navbar-item' href='/'>
                 Home
               </Link>
-              <div class='navbar-item has-dropdown is-hoverable'>
-                <a class='navbar-link'>More</a>
-                <div class='navbar-dropdown'>
-                  <Link to={'/about'} class='navbar-item'>
-                    About
-                  </Link>
-                  <Link to={'/about'} class='navbar-item'>
-                    About
-                  </Link>
-                  <Link to={'/about'} class='navbar-item'>
-                    About
-                  </Link>
-                  <Link to={'/about'} class='navbar-item'>
-                    About
-                  </Link>
-                </div>
-              </div>
+              <ServicesMenu />
             </div>
             <div className='navbar-end has-background-white-bis'>
               <div className='navbar-item'>
-                <div className='field is-grouped'>
-                  <ResponseTapBtn />
-
-                  <p className='control'>
-                    <a className='button is-primary' href='/'>
-                      <span className='icon'>
-                        <FaRegEnvelope />
-                      </span>
-                      <span>Send email</span>
-                    </a>
-                  </p>
-                </div>
+                <CallEmailBtns />
               </div>
             </div>
           </div>

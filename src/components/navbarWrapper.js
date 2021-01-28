@@ -1,7 +1,6 @@
-// MailWidgetWrapper.js
 import React from 'react';
 
-import Navbar from './navbar';
+import Navbar from './megamenu/navbar';
 
 const navbarWrapper = ({ children }) => (
   <>
