@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
 import Map from '../components/map/Map';
 
 const OfficesPage = (mapSettings, position) => {
