@@ -13,7 +13,7 @@ const IndexPage = () => {
         <div className='section'>
           <div className='container'>
             <div className='content'>
-              <h1 className='title'>This is Home</h1>
+              <h1 className='title'>This is Home.</h1>
             </div>
           </div>
         </div>
