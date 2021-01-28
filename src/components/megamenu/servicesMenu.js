@@ -15,7 +15,7 @@ const ServicesMenu = () => {
         <div className='container is-fluid'>
           <div className='columns'>
             <div className='column'>
-              <Link to={'/'}>
+              <Link to={'/about'}>
                 <h1 className='title is-6 is-mega-menu-title is-hovered'>
                   About
                 </h1>
