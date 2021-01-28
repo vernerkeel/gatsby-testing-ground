@@ -1,6 +1,6 @@
 import React from 'react';
 import '../bulma/bulma.scss';
-import EmailForm from './EmailForm';
+import EmailForm from './emailForm';
 
 const Layout = ({ children }) => {
   return (
