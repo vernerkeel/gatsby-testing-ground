@@ -59,7 +59,7 @@ const EmailForm = () => {
             <form onSubmit={handleOnSubmit}>
               {formFields.map((i, idx) => (
                 <div key={idx} className='field'>
-                  <label className='label' for={i.fieldId}>
+                  <label className='label' htmlFor={i.fieldId}>
                     Name
                   </label>
                   <div className='control has-icons-left'>

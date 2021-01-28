@@ -7,7 +7,9 @@ const callEmailBtns = () => {
       <p className='control'>
         <a
           className='button is-danger response-tap'
-          onClick={'rTapClickToCall(432151)'}
+          onClick={() => {
+            'rTapClickToCall(432151)';
+          }}
         >
           <span className='icon'>
             <FaPhone className='is-size-5' />

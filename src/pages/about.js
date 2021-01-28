@@ -4,8 +4,8 @@ import Layout from '../components/layout';
 const AboutPage = () => {
   return (
     <Layout>
-      <div class='section'>
-        <div class='container'>
+      <div className='section'>
+        <div className='container'>
           <div className='content'>
             <h1 className='title'>This is About</h1>
           </div>
