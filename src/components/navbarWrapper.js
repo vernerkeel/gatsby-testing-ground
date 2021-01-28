@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Navbar from './megamenu/navbar';
+import Navbar from './megamenu/Navbar';
 
 const navbarWrapper = ({ children }) => (
   <>

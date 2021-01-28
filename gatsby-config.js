@@ -15,8 +15,10 @@ module.exports = {
         policy: [{ userAgent: '*', disallow: '/' }],
       },
     },
+
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-mdx`,
+    `gatsby-plugin-react-leaflet`,
   ],
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import CallEmailBtns from './callEmailBtns';
-import ServicesMenu from './servicesMenu';
+import CallEmailBtns from './CallEmailBtns';
+import ServicesMenu from './ServicesMenu';
 
 const NavbarBurger = (props) => (
   <div

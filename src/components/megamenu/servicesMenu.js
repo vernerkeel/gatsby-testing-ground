@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { FaUserTie } from 'react-icons/fa';
+import { FaMapMarkerAlt } from 'react-icons/fa';
 const ServicesMenu = () => {
   return (
     <div className='navbar-item has-dropdown is-hoverable is-mega'>
       <div className='navbar-link flex'>
-        <FaUserTie className='is-size-4 has-text-info' /> &nbsp;More{' '}
+        <FaMapMarkerAlt className='is-size-4 has-text-info' />
+        <Link to={'/offices'}> &nbsp;Offices </Link>
       </div>
       <div
         id='blogDropdown'
@@ -21,11 +22,11 @@ const ServicesMenu = () => {
                 </h1>
               </Link>
 
-              <Link to={'/test1'} className='navbar-item '>
-                Test1
+              <Link to={'/london'} className='navbar-item '>
+                London
               </Link>
-              <Link to={'/test2'} className='navbar-item '>
-                Test2
+              <Link to={'/london'} className='navbar-item '>
+                London
               </Link>
             </div>
           </div>

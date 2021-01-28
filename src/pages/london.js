@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
-const TestPage2 = () => {
+const LondonPage = () => {
   return (
     <Layout>
       <div className='section'>
@@ -15,4 +15,4 @@ const TestPage2 = () => {
   );
 };
 
-export default TestPage2;
+export default LondonPage;
