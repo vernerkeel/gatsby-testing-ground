@@ -20,9 +20,9 @@ const IndexPage = () => {
         <div className='section'>
           <div className='container'>
             <Map {...mapOptions}>
-              <Marker position={[53.510302, -2.33581]}></Marker>
-              <Marker position={[53.510302, -1.335001]}></Marker>
-              <Marker position={[53.510302, -3.335001]}></Marker>
+              <Marker position={[53.510302, -2.33581]}/>
+              <Marker position={[53.510302, -1.335001]}/>
+              <Marker position={[53.510302, -3.335001]}/>
             </Map>
           </div>
         </div>
