@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'gatsby';
 import { FaMapMarkerAlt } from 'react-icons/fa';
-const ServicesMenu = () => {
+
+const ServicesMenu = ({location}) => {
+  const [isVisible, setIsVisible]=useState(false)
+
+  useEffect(()=>{
+    setIsVisible(!isVisible)
+    setTimeout(()=>setIsVisible(true),1)
+  },[location])
+
   return (
-    <div className='navbar-item has-dropdown is-hoverable is-mega'>
+    <div className={`navbar-item has-dropdown is-hoverable is-mega`}>
       <div className='navbar-link flex'>
         <FaMapMarkerAlt className='is-size-4 has-text-info' />
         <Link to={'/offices'}> &nbsp;Offices </Link>
@@ -13,8 +21,8 @@ const ServicesMenu = () => {
         className='navbar-dropdown '
         data-style={{ width: '18rem' }}
       >
-        <div className='container is-fluid'>
-          <div className='columns'>
+        <div className={`container is-fluid`}>
+          {isVisible && <div className='columns'>
             <div className='column'>
               <Link to={'/about'}>
                 <h1 className='title is-6 is-mega-menu-title is-hovered'>
@@ -29,7 +37,7 @@ const ServicesMenu = () => {
                 London
               </Link>
             </div>
-          </div>
+          </div>}
         </div>
       </div>
     </div>
