@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import useWindowSize from '../../utils/hooks/useWindowSize';
 import CallEmailBtns from './callEmailBtns';
 import ServicesMenu from './servicesMenu';
 
@@ -16,13 +17,22 @@ const NavbarBurger = (props) => (
 
 const Navbar = ({ location }) => {
   const [activeMenu, setActiveMenu] = useState(false);
-  const fakeReference = useRef(null);
-  const toggleMenu = () => {
+  const { width } = useWindowSize();
+  const toggleMenu = () => setActiveMenu(!activeMenu);
+
+  useEffect(() => {
     setActiveMenu(!activeMenu);
-  };
+    if (typeof window !== 'undefined') {
+      if (width >= 1024) setTimeout(() => setActiveMenu(true), 1);
+    }
+  }, [location]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') setActiveMenu(width > 1024);
+  }, [width]);
 
   return (
-    <nav className='navbar has-background-white-bis has-shadow' ref={fakeReference}>
+    <nav className='navbar has-background-white-bis has-shadow'>
       <div className='container'>
         <div className='navbar-brand'>
           <NavbarBurger
@@ -30,23 +40,19 @@ const Navbar = ({ location }) => {
             toggleMenu={toggleMenu}
           />
         </div>
-        <div
-          className={`navbar-menu ${
-            activeMenu ? 'is-active' : ''
-          }`}
-        >
+        {activeMenu && <div className={`navbar-menu ${activeMenu ? 'is-active' : ''}`}>
           <div className='navbar-start'>
             <Link to={'/'} className='navbar-item' href='/'>
               Home
             </Link>
-            <ServicesMenu location={location}/>
+            <ServicesMenu activeMenu={activeMenu}/>
           </div>
           <div className='navbar-end has-background-white-bis'>
             <div className='navbar-item'>
               <CallEmailBtns/>
             </div>
           </div>
-        </div>
+        </div>}
       </div>
     </nav>
   );
