@@ -1,8 +1,9 @@
 import * as React from 'react';
+import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import Map from '../components/map/Map';
 
-const OfficesPage = (mapSettings, position) => {
+const OfficesPage = () => {
   return (
     <Layout>
       <div className='section'>
@@ -51,34 +52,32 @@ const OfficesPage = (mapSettings, position) => {
         <ul>
           <li class='is-active'>
             <a>
-              <span class='icon is-small'>
-                <i class='fas fa-image' aria-hidden='true'></i>
-              </span>
-              <span>Pictures</span>
+              <span>All offices</span>
             </a>
           </li>
           <li>
             <a>
-              <span class='icon is-small'>
-                <i class='fas fa-music' aria-hidden='true'></i>
-              </span>
-              <span>Music</span>
+              <span>Salford HQ</span>
             </a>
           </li>
           <li>
             <a>
-              <span class='icon is-small'>
-                <i class='fas fa-film' aria-hidden='true'></i>
-              </span>
-              <span>Videos</span>
+              <span>Manchester</span>
+            </a>
+          </li>
+          <li>
+            <Link to={'/london'}>
+              <span>London</span>
+            </Link>
+          </li>
+          <li>
+            <a>
+              <span>Birmingham</span>
             </a>
           </li>
           <li>
             <a>
-              <span class='icon is-small'>
-                <i class='far fa-file-alt' aria-hidden='true'></i>
-              </span>
-              <span>Documents</span>
+              <span>Leeds</span>
             </a>
           </li>
         </ul>

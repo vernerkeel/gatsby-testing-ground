@@ -52,63 +52,75 @@ const EmailForm = () => {
     },
   ];
   return (
-    <div className='section'>
+    <div className='section has-background-info'>
       <div className='container'>
         <div className='columns is-centered'>
-          <div className='column is-4'>
-            <form onSubmit={handleOnSubmit}>
-              {formFields.map((i, idx) => (
-                <div key={idx} className='field'>
-                  <label className='label' htmlFor={i.fieldId}>
-                    Name
-                  </label>
-                  <div className='control has-icons-left'>
-                    <input
-                      className='input'
-                      required='required'
-                      id={i.fieldId}
-                      type='text'
-                      name={i.fieldId}
-                      placeholder={i.placeholder}
-                    />
-                    <span className='icon is-small is-left'>
-                      <i.Icon />
-                    </span>
+          <div className='column box is-6'>
+            <div className='columns is-centered'>
+              <div className='column is-12'>
+                <div className='section'>
+                  <h2 className='title is-2'>
+                    Send us a confidential message and we get back to you as
+                    soon as possible{' '}
+                  </h2>
+                </div>
+              </div>
+            </div>
+
+            <div className='columns is-centered'>
+              <div className='column is-10'>
+                <form onSubmit={handleOnSubmit}>
+                  {formFields.map((i, idx) => (
+                    <div key={idx} className='field'>
+                      <label className='label' htmlFor={i.fieldId}>
+                        Name
+                      </label>
+                      <div className='control has-icons-left'>
+                        <input
+                          className='input'
+                          required='required'
+                          id={i.fieldId}
+                          type='text'
+                          name={i.fieldId}
+                          placeholder={i.placeholder}
+                        />
+                        <span className='icon is-small is-left'>
+                          <i.Icon />
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+
+                  <div className='field'>
+                    <label className='label'>Enquiry</label>
+                    <div className='control has-icons-left'>
+                      <textarea
+                        className='textarea'
+                        placeholder='How can we help you?'
+                        type='text'
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
 
-              <div className='field'>
-                <label className='label'>Enquiry</label>
-                <div className='control has-icons-left'>
-                  <textarea
-                    className='textarea'
-                    placeholder='How can we help you?'
-                    type='text'
-                  />
-                </div>
+                  <div className='field is-grouped'>
+                    <div className='control'>
+                      <button
+                        type='submit'
+                        className='button is-link is-large mb-6'
+                        disabled={serverState.submitting}
+                      >
+                        Submit Enquiry
+                      </button>
+                    </div>
+                  </div>
+                  {serverState.status && (
+                    <p className={!serverState.status.ok ? 'errorMsg' : ''}>
+                      {serverState.status.msg}
+                    </p>
+                  )}
+                </form>
               </div>
-
-              <div className='field is-grouped'>
-                <div className='control'>
-                  <button
-                    type='submit'
-                    className='button is-link'
-                    disabled={serverState.submitting}
-                  >
-                    Submit Enquiry
-                  </button>
-                </div>
-                <div className='control'>
-                  <button className='button is-link is-light'>Cancel</button>
-                </div>
-              </div>
-              {serverState.status && (
-                <p className={!serverState.status.ok ? 'errorMsg' : ''}>
-                  {serverState.status.msg}
-                </p>
-              )}
-            </form>
+            </div>
           </div>
         </div>
       </div>

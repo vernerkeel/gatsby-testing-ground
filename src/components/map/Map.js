@@ -1,13 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import L from 'leaflet';
-import {
-  MapContainer,
-  TileLayer,
-  ZoomControl,
-  Marker,
-  Popup,
-} from 'react-leaflet';
+import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
 import mapStyles from './Map.module.css';
 import 'leaflet-fullscreen/dist/Leaflet.fullscreen.js';
 import 'leaflet-fullscreen/dist/leaflet.fullscreen.css';
@@ -35,7 +29,7 @@ const Map = (props) => {
   }
   const mapOptions = {
     zoomControl: false,
-    zoom: 7,
+    zoom: 12,
     fullscreenControl: true,
     ...rest,
   };
