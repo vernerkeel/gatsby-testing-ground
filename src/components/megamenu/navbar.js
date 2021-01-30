@@ -40,7 +40,7 @@ const Navbar = ({ location }) => {
             toggleMenu={toggleMenu}
           />
         </div>
-        {activeMenu && <div className={`navbar-menu ${activeMenu ? 'is-active' : ''}`}>
+        <div className={`navbar-menu ${activeMenu ? 'is-active' : ''}`}>
           <div className='navbar-start'>
             <Link to={'/'} className='navbar-item' href='/'>
               Home
@@ -52,7 +52,7 @@ const Navbar = ({ location }) => {
               <CallEmailBtns/>
             </div>
           </div>
-        </div>}
+        </div>
       </div>
     </nav>
   );
