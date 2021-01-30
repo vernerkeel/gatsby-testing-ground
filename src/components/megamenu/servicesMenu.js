@@ -2,13 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'gatsby';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 
-const ServicesMenu = ({location}) => {
-  const [isVisible, setIsVisible]=useState(false)
+const ServicesMenu = ({activeMenu}) => {
 
-  useEffect(()=>{
-    setIsVisible(!isVisible)
-    setTimeout(()=>setIsVisible(true),1)
-  },[location])
 
   return (
     <div className={`navbar-item has-dropdown is-hoverable is-mega`}>
@@ -22,7 +17,7 @@ const ServicesMenu = ({location}) => {
         data-style={{ width: '18rem' }}
       >
         <div className={`container is-fluid`}>
-          {isVisible && <div className='columns'>
+          {activeMenu && <div className='columns'>
             <div className='column'>
               <Link to={'/about'}>
                 <h1 className='title is-6 is-mega-menu-title is-hovered'>
