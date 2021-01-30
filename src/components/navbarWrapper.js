@@ -2,9 +2,9 @@ import React from 'react';
 
 import Navbar from './megamenu/navbar';
 
-const navbarWrapper = ({ children }) => (
+const navbarWrapper = ({ children, location }) => (
   <>
-    <Navbar />
+    <Navbar location={location}/>
     {children}
   </>
 );

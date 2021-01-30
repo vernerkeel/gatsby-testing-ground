@@ -26,16 +26,16 @@ export default function HTML(props) {
           type='text/javascript'
           dangerouslySetInnerHTML={{
             __html: `
-   var adiInit = "76225", adiRVO = true;
-   var adiFunc = null;
-   (function() {
-      var adiSrc = document.createElement("script"); adiSrc.type = "text/javascript";
-      adiSrc.async = true;
-      adiSrc.src = ("https:" == document.location.protocol ? "https://static-ssl" : "http://static-cdn")
-      	+ ".responsetap.com/static/scripts/rTapTrack.min.js";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(adiSrc, s);
-   })();`,
+             var adiInit = "76225", adiRVO = true;
+             var adiFunc = null;
+             (function() {
+                var adiSrc = document.createElement("script"); adiSrc.type = "text/javascript";
+                adiSrc.async = true;
+                adiSrc.src = ("https:" == document.location.protocol ? "https://static-ssl" : "http://static-cdn")
+                  + ".responsetap.com/static/scripts/rTapTrack.min.js";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(adiSrc, s);
+             })();`,
           }}
         />
         {/*RESPONSE TAP tracking code END*/}
